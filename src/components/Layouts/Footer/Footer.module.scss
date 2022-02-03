@@ -1,0 +1,14 @@
+.Wrapper {
+  position: relative;
+  background-color: rgb(95, 49, 49);
+  height: 28vh;
+  z-index: 9;
+  .Copyright {
+    h2 {
+      position: absolute;
+      left: 42%;
+      bottom: 40%;
+      color: rgb(194, 173, 189);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.headerContainer {
+  position: relative;
+  background-color: rgb(95, 49, 49);
+  height: 28vh;
+  z-index: 9;
+  .header {
+    h1 {
+      color: rgb(194, 173, 189);
+      text-align: center;
+      padding-top: 20px;
+      span {
+        display: block;
+        font-size: 50px;
+      }
+      p {
+        font-size: 15px;
+        color: rgb(126, 95, 119);
+        position: absolute;
+        left: 42.6%;
+        margin-top: 5px;
+      }
+    }
+  }
+}
