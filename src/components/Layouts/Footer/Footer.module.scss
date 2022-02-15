@@ -1,14 +1,121 @@
+$cn: rgba(0, 0, 0, 0);
+$el: #532727;
+$er: #532727;
+$eb: #532727;
+$ef: #532727;
+$ew: 640px;
+$eh: 420px;
+
 .Wrapper {
-  position: relative;
-  background-color: rgb(95, 49, 49);
-  height: 28vh;
-  z-index: 9;
-  .Copyright {
-    h2 {
+  width: 100%;
+  background: $eb;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  filter: drop-shadow(0px -10px 10px black);
+  .footerCap {
+    position: absolute;
+    height: 0%;
+    background: black;
+    opacity: 1;
+
+    &::after {
+      content: "";
+      border-style: solid;
+      border-width: 0 $ew + -50px $eh + -300px $ew + 30px;
+      border-color: $cn $cn $el $cn;
       position: absolute;
-      left: 42%;
-      bottom: 40%;
-      color: rgb(194, 173, 189);
+      bottom: 0%;
+    }
+  }
+  .content {
+    z-index: 2;
+    position: relative;
+    font-size: 16px;
+    .Section {
+      justify-content: center;
+      text-align: center;
+      .innerContent {
+        color: rgb(185, 175, 159);
+        .copyright {
+          text-decoration: none;
+          color: rgb(185, 175, 159);
+          font-size: 20px;
+          &:hover {
+            color: khaki;
+          }
+        }
+        ul {
+          justify-content: center;
+          list-style: none;
+          padding: 5px;
+          display: flex;
+          a {
+            text-transform: capitalize;
+            padding: 15px;
+            font-size: 16px;
+            text-decoration: none;
+            color: rgb(185, 175, 159);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .Wrapper {
+    .footerCap {
+      position: absolute;
+      height: 0%;
+      background: black;
+      opacity: 1;
+
+      &::after {
+        content: "";
+        border-style: solid;
+        border-width: 0 $ew + -200px $eh + -300px $ew + -220px;
+        border-color: $cn $cn $el $cn;
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .Wrapper {
+    .footerCap {
+      position: absolute;
+      height: 0%;
+      background: black;
+      opacity: 1;
+
+      &::after {
+        content: "";
+        border-style: solid;
+        border-width: 0 $ew + -350px $eh + -300px $ew + -350px;
+        border-color: $cn $cn $el $cn;
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .Wrapper {
+    .footerCap {
+      position: absolute;
+      height: 0%;
+      background: black;
+      opacity: 1;
+
+      &::after {
+        content: "";
+        border-style: solid;
+        border-width: 0 $ew + -500px $eh + -300px $ew + -500px;
+        border-color: $cn $cn $el $cn;
+        position: absolute;
+        bottom: 0%;
+      }
     }
   }
 }

@@ -1,23 +1,167 @@
 .headerContainer {
-  position: relative;
-  background-color: rgb(95, 49, 49);
-  height: 28vh;
-  z-index: 9;
-  .header {
-    h1 {
-      color: rgb(194, 173, 189);
-      text-align: center;
-      padding-top: 20px;
-      span {
-        display: block;
-        font-size: 50px;
+  height: 10vh;
+  color: white;
+  align-items: center;
+  display: flex;
+  .Logo {
+    display: flex;
+    margin-left: 30px;
+    .image {
+      width: 5%;
+      margin-right: 5px;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .heading {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: 100;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      cursor: pointer;
+      z-index: 999;
+    }
+  }
+
+  .sideNav {
+    width: 50%;
+    .navLinks {
+      display: flex;
+      list-style: none;
+      width: 100%;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: auto;
+
+      li {
+        cursor: pointer;
+        z-index: 999;
+        .another {
+          padding: 5px 15px;
+          font-size: 18px;
+          color: white;
+          background-color: #004a8b;
+          text-decoration: none;
+          font-weight: 700;
+          border-radius: 15px 5px;
+          filter: drop-shadow(0px 1px 2px rgb(0, 0, 0));
+        }
+        a {
+          color: white;
+          font-size: 15px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
       }
-      p {
-        font-size: 15px;
-        color: rgb(126, 95, 119);
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hamburgers {
+    cursor: pointer;
+    z-index: 99;
+    .hamburger {
+      position: absolute;
+      width: 23px;
+      height: 3px;
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgb(255, 101, 42, 0.2);
+      transition: all 0.5s ease-in-out;
+      right: 5%;
+      &::before {
+        content: "";
         position: absolute;
-        left: 42.6%;
-        margin-top: 5px;
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-10px);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(10px);
+      }
+    }
+    .activeHamburger {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: transparent;
+      border-radius: 5px;
+      transform: translateX(5px);
+      transition: all 0.5s ease-in-out;
+      right: 5%;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        transition: all 0.5s ease-in-out;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .sideNav {
+    .navLinks {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to left, #6b90ff, #156f75);
+      transition: all 0.4s ease-in-out;
+      transform: translateX(200%);
+      top: -5%;
+      li {
+        display: none;
+        a {
+          color: white;
+          font-size: 15px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+      }
+    }
+  }
+  .activeSideNav {
+    .navLinks {
+      position: fixed;
+      width: 40%;
+      height: 90vh;
+      background: linear-gradient(to left, #6b90ff, #4481c1);
+      transition: all 0.6s ease-in-out;
+      transform: translateX(0%);
+      list-style: none;
+      top: -5%;
+      right: 5%;
+      z-index: 1;
+      li {
+        cursor: pointer;
+        margin-top: 50px;
+        padding: 50px;
+        z-index: 99999999;
+        a {
+          color: white;
+          font-size: 15px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
       }
     }
   }
