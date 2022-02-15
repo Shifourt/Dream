@@ -1,0 +1,57 @@
+.aboutContant {
+  width: 100%;
+  padding-block: 70px;
+  overflow: hidden;
+  .Cloud1 {
+    position: absolute;
+    width: 8%;
+    left: 25%;
+    animation: Moving 5s linear infinite;
+  }
+  .Cloud2 {
+    position: absolute;
+    width: 10%;
+    left: 60%;
+    margin-top: -50px;
+    animation: Moving 5s linear infinite;
+  }
+  .Cloud3 {
+    position: absolute;
+    width: 15%;
+    animation: Moving 5s linear infinite;
+  }
+  .Cloud4 {
+    position: absolute;
+    width: 15%;
+    right: 10%;
+    animation: Moving 5s linear infinite;
+  }
+  .Moving {
+    animation: Moving 1s linear infinite;
+    .Plane {
+      position: absolute;
+      width: 5%;
+      left: -10%;
+      animation: run 10s linear infinite;
+    }
+  }
+}
+@keyframes Moving {
+  100% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  0% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes run {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(1500px);
+  }
+}

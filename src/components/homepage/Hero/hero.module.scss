@@ -15,7 +15,10 @@
       .globle {
         width: 80%;
         transition: transform 500ms ease-in;
-        animation: round 100s linear infinite;
+        animation: round 80s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
     }
     .headline {
@@ -41,7 +44,11 @@
         text-decoration: none;
         font-weight: 700;
         border-radius: 15px 5px;
-        filter: drop-shadow(0px 10px 12px rgb(255, 0, 0));
+        transition: all 0.5s ease-in-out;
+        filter: drop-shadow(0px 10px 12px rgb(0, 0, 0));
+        &:hover {
+          background-color: #004a8b;
+        }
       }
     }
   }
