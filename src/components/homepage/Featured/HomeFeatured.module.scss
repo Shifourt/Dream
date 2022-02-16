@@ -1,5 +1,187 @@
 .aboutContant {
-  display: flex;
-  width: 80%;
+  width: 100%;
+  margin: 0 auto;
   padding-block: 150px;
+  .header {
+    width: 100%;
+    text-align: center;
+    color: rgb(223, 204, 204);
+    padding: 35px;
+    font-size: 70px;
+    font-family: serif;
+    filter: drop-shadow(0px 5px 5px black);
+    text-transform: uppercase;
+  }
+  .Section {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .img {
+      background: url(../../../images/Paid_Vacation-1080x675.png) no-repeat left;
+      background-size: 70%;
+      overflow: hidden;
+      padding: 80px;
+      height: 100vh;
+      filter: drop-shadow(0px 10px 20px black);
+    }
+    .Text {
+      width: 60%;
+      float: right;
+      background: #004a8b;
+      padding-inline: 100px;
+      padding-block: 80px;
+      border-radius: 1500px 0px;
+      filter: drop-shadow(0px 1px 5px black);
+      transition: transform 500ms ease-in;
+      animation: round 5s linear infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      .image {
+        width: 20%;
+        margin-left: 40%;
+        filter: drop-shadow(0px 2px 15px black);
+      }
+      p {
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+        filter: drop-shadow(0px 1px 35px black);
+      }
+      a {
+        padding: 10px 25px;
+        font-size: 18px;
+        color: white;
+        background-color: #004a8b;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 50px 0px;
+        transition: all 0.5s ease-in-out;
+        filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+        &:hover {
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .aboutContant {
+    width: 100%;
+    margin: 0 auto;
+    padding-block: 150px;
+    .header {
+      font-size: 40px;
+    }
+    .Section {
+      .Text {
+        width: 60%;
+        float: right;
+        background: #004a8b;
+        padding-inline: 100px;
+        padding-block: 80px;
+        border-radius: 1500px 0px;
+        filter: drop-shadow(0px 1px 5px black);
+        transition: transform 500ms ease-in;
+        animation: round 5s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
+
+        .image {
+          width: 20%;
+          margin-left: 40%;
+          filter: drop-shadow(0px 2px 15px black);
+        }
+        p {
+          font-size: 15px;
+          font-weight: 600;
+          color: white;
+          filter: drop-shadow(0px 1px 35px black);
+        }
+        a {
+          padding: 5px 15px;
+          font-size: 10px;
+          color: white;
+          background-color: #004a8b;
+          text-decoration: none;
+          font-weight: 700;
+          border-radius: 50px 0px;
+          transition: all 0.5s ease-in-out;
+          filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+          &:hover {
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .aboutContant {
+    width: 100%;
+    margin: 0 auto;
+    padding-block: 150px;
+    .header {
+      font-size: 30px;
+    }
+    .Section {
+      .Text {
+        width: 70%;
+        float: right;
+        background: #004a8b;
+        padding-inline: 100px;
+        padding-block: 80px;
+        border-radius: 1500px 0px;
+        filter: drop-shadow(0px 1px 5px black);
+        transition: transform 500ms ease-in;
+        animation: round 5s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
+
+        .image {
+          width: 50%;
+          margin-left: 40%;
+          filter: drop-shadow(0px 2px 15px black);
+        }
+        p {
+          font-size: 8px;
+          font-weight: 600;
+          color: white;
+          filter: drop-shadow(0px 1px 35px black);
+        }
+        a {
+          padding: 5px 15px;
+          font-size: 10px;
+          color: white;
+          background-color: #004a8b;
+          text-decoration: none;
+          font-weight: 700;
+          border-radius: 50px 0px;
+          transition: all 0.5s ease-in-out;
+          filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+          &:hover {
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-8deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }

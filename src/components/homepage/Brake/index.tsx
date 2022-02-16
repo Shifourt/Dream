@@ -20,6 +20,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
       <div className={styles.Cloud4}>
         <Image src={Cloud} alt={"/"} />
       </div>
+
       <div className={styles.Moving}>
         <div className={styles.Plane}>
           <Image src={Airplane} alt={"/"} />
