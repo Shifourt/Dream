@@ -3,7 +3,61 @@
   margin: 0 auto;
   background: linear-gradient(to left, #b6d217, #70ad16);
   padding-block: 50px;
+
+  ul {
+    position: absolute;
+    top: 165%;
+    z-index: 0;
+    left: -10%;
+    list-style: none;
+    li {
+      margin-top: -50px;
+      &:nth-child(1) {
+        margin-top: 0px;
+      }
+      &:nth-child(14) {
+        margin-top: -73px;
+      }
+    }
+  }
+  .beach {
+    position: relative;
+    margin-top: 47px;
+    z-index: 0;
+    h2 {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: #c6ff2a;
+      padding: 35px;
+      font-size: 50px;
+      font-family: serif;
+      filter: drop-shadow(0px 5px 5px rgb(255, 29, 29));
+      text-transform: uppercase;
+      z-index: 4;
+    }
+    .people {
+      position: absolute;
+      width: 20%;
+      margin-top: -520px;
+      left: 10%;
+    }
+    .peopleTwo {
+      position: absolute;
+      width: 20%;
+      margin-top: -520px;
+      right: 10%;
+    }
+  }
+  .water {
+    position: relative;
+    margin-top: -522px;
+    transition: transform 500ms ease-in;
+    animation: up 5s linear infinite;
+    z-index: 0;
+  }
   .header {
+    position: relative;
     width: 100%;
     text-align: center;
     color: rgb(223, 204, 204);
@@ -12,6 +66,7 @@
     font-family: serif;
     filter: drop-shadow(0px 5px 5px black);
     text-transform: uppercase;
+    z-index: 4;
   }
   .Section {
     min-height: 75vh;
@@ -19,6 +74,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    z-index: 4;
     .img {
       background: url(../../../images/Paid_Vacation-1080x675.png) no-repeat left;
       background-size: 70%;
@@ -26,6 +82,7 @@
       padding: 80px;
       height: 100vh;
       filter: drop-shadow(0px 10px 20px black);
+      z-index: 4;
     }
     .Text {
       width: 60%;
@@ -37,6 +94,7 @@
       filter: drop-shadow(0px 1px 5px black);
       transition: transform 500ms ease-in;
       animation: round 5s linear infinite;
+      z-index: 4;
       &:hover {
         animation-play-state: paused;
       }
@@ -184,5 +242,16 @@
   }
   100% {
     transform: rotateZ(0deg);
+  }
+}
+@keyframes up {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }

@@ -2,7 +2,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import Beach from "../../../images/beach.png";
+import Fence from "../../../images/fence.png";
+import Grass from "../../../images/grass2.png";
+import People from "../../../images/people.png";
+import PeopleTwo from "../../../images/people2.png";
 import Logo from "../../../images/sun-umbrella2.png";
+import Water from "../../../images/water.png";
 import styles from "./HomeFeatured.module.scss";
 
 interface HomeFeaturedProps {}
@@ -28,6 +34,63 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             </div>
           </div>
         </div>
+      </div>
+      <ul className={styles.grass}>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Grass} alt={"/"} />
+        </li>
+        <li>
+          <Image src={Fence} alt={"/"} />
+        </li>
+      </ul>
+      <div className={styles.beach}>
+        <h2 data-aos="fade-in">all you need is a break</h2>
+        <Image src={Beach} alt={"/"} />
+        <div className={styles.people}>
+          <Image src={People} alt={"/"} />
+        </div>
+        <div className={styles.peopleTwo}>
+          <Image src={PeopleTwo} alt={"/"} />
+        </div>
+      </div>
+      <div className={styles.water}>
+        <Image src={Water} alt={"/"} />
       </div>
     </div>
   );
