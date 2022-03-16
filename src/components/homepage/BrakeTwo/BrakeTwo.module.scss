@@ -22,7 +22,17 @@
     top: 80%;
     left: -10%;
     animation: run 10s linear infinite;
+    z-index: 3;
+  }
+  .Fence {
+    position: absolute;
+    top: 70%;
     z-index: 2;
+  }
+  .FenceTwo {
+    position: absolute;
+    top: 85%;
+    z-index: 5;
   }
   .road {
     position: relative;

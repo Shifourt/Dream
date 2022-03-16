@@ -13,16 +13,17 @@
     li {
       margin-top: -50px;
       &:nth-child(1) {
-        margin-top: 0px;
+        margin-top: 80px;
       }
       &:nth-child(14) {
-        margin-top: -73px;
+        position: absolute;
+        margin-top: -65px;
       }
     }
   }
   .beach {
     position: relative;
-    margin-top: 47px;
+    margin-top: 135px;
     z-index: 0;
     h2 {
       position: absolute;

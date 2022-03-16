@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import City from "../../../images/City.png";
 import Car from "../../../images/Daco_4333372.png";
+import Fence from "../../../images/fence2.png";
 import styles from "./BrakeTwo.module.scss";
 
 interface HomeFeaturedProps {}
@@ -15,8 +16,14 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
       <div className={styles.Car}>
         <Image src={Car} alt={"/"} />
       </div>
+      <div className={styles.Fence}>
+        <Image src={Fence} alt={"/"} />
+      </div>
       <div className={styles.road}>
         <div className={styles.lines}></div>
+      </div>
+      <div className={styles.FenceTwo}>
+        <Image src={Fence} alt={"/"} />
       </div>
     </div>
   );
