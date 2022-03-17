@@ -1,15 +1,33 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Island from "../../../images/1.jpg";
+import People from "../../../images/inWater.png";
+import Ship from "../../../images/ship.png";
 import styles from "./information.module.scss";
 
 interface HomeFeaturedProps {}
 const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className={styles.aboutContant}>
+      <div className={styles.People}>
+        <Image src={People} alt={"/"} />
+      </div>
+      <div className={styles.moving}>
+        <div className={styles.ships}>
+          <Image src={Ship} alt={"/"} />
+        </div>
+      </div>
+      <div className={styles.island}>
+        <Image src={Island} alt={"/"} />
+      </div>
       <div className={styles.texts}>
-        <div className={styles.textOne}>
-          <Image src={Island} alt={"/"} />
+        <div data-aos="flip-up" className={styles.text}>
           <h2>Plans</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -21,7 +39,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             Natus, tempore. Sit impedit earum ipsum!
           </p>
         </div>
-        <div className={styles.textTwo}>
+        <div data-aos="flip-up" className={styles.text}>
           <h2>Education</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
@@ -30,7 +48,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             autem ipsam.
           </p>
         </div>
-        <div className={styles.textThree}>
+        <div data-aos="flip-down" className={styles.text}>
           <h2>Safty</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae in
@@ -40,7 +58,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             mollitia voluptate at?
           </p>
         </div>
-        <div className={styles.textFour}>
+        <div data-aos="flip-down" className={styles.text}>
           <h2>Population</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,
