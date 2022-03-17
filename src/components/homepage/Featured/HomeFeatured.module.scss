@@ -1,12 +1,12 @@
 .aboutContant {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(to left, #b6d217, #70ad16);
-  padding-block: 50px;
 
   ul {
     position: absolute;
-    top: 165%;
+    top: -15%;
     z-index: 0;
     left: -10%;
     list-style: none;
@@ -17,13 +17,13 @@
       }
       &:nth-child(14) {
         position: absolute;
-        margin-top: -65px;
+        margin-top: -70px;
       }
     }
   }
   .beach {
     position: relative;
-    margin-top: 135px;
+    margin-top: 95px;
     z-index: 0;
     h2 {
       position: absolute;

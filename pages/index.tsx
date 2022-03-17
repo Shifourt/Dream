@@ -3,6 +3,7 @@ import Brake from "../src/components/homepage/Brake";
 import BrakeTwo from "../src/components/homepage/BrakeTwo";
 import Featured from "../src/components/homepage/Featured";
 import Hero from "../src/components/homepage/Hero";
+import Information from "../src/components/homepage/Information";
 import Layouts from "../src/components/Layouts";
 
 const Home: NextPage = (props) => {
@@ -12,6 +13,7 @@ const Home: NextPage = (props) => {
       <Brake />
       <BrakeTwo />
       <Featured />
+      <Information />
     </Layouts>
   );
 };

@@ -1,0 +1,39 @@
+.aboutContant {
+  position: relative;
+  background: #6dd2ed;
+  padding-top: 250px;
+  padding-bottom: 100px;
+  margin-top: -5%;
+  .texts {
+    position: relative;
+    text-align: center;
+    h2 {
+      font-size: 50px;
+    }
+    .textOne {
+      position: relative;
+      margin-bottom: 200px;
+      width: 40%;
+      left: 5%;
+      background-color: #f0e1c0;
+    }
+    .textTwo {
+      position: relative;
+      width: 30%;
+      left: 65%;
+      margin-bottom: 200px;
+    }
+    .textThree {
+      position: relative;
+      width: 40%;
+      left: 10%;
+      margin-bottom: 200px;
+    }
+    .textFour {
+      position: relative;
+      width: 30%;
+      left: 65%;
+      margin-bottom: 200px;
+    }
+  }
+}
