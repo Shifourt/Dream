@@ -2,112 +2,113 @@
   position: relative;
   background: #6dd2ed;
   padding-top: 250px;
-  padding-bottom: 100px;
+  padding-bottom: 250px;
   margin-top: -5%;
   overflow: hidden;
   z-index: 2;
   .People {
     position: absolute;
-    margin-top: -300px;
+    margin-top: -250px;
     width: 25%;
     left: 20%;
     animation: Moving 4s linear infinite;
+    z-index: 3;
   }
   .island {
     position: relative;
-    z-index: 3;
-  }
-  .moving {
-    position: relative;
-    z-index: 88;
-    animation: Moving 30s linear infinite;
-    .ships {
-      position: relative;
-      width: 10%;
-      left: -10%;
-      animation: run 30s linear infinite;
-    }
+    z-index: 2;
   }
 
   .texts {
     position: relative;
     width: 90%;
-    margin: 0 auto;
     text-align: center;
+    margin-bottom: 200px;
 
-    .text {
+    .wave {
       position: relative;
-      background: linear-gradient(to left, #68d3f0, #b7c8f5);
       filter: drop-shadow(0px 5px 50px #51d7fc);
       padding: 50px;
       z-index: 2;
       &:nth-child(1) {
-        left: -80%;
-        margin-top: 50px;
-        background: url(../../../images/wood.jpg);
-        position: relative;
-        width: 70%;
-        display: block;
-        border: #6c432f 10px solid;
-        border-right: 100px solid #6c432f;
-        padding-right: 150px;
-        margin-bottom: 150px;
-        border-radius: 150px 1000px 1000px 150px;
-        filter: drop-shadow(0px 10px 20px #000000);
-        animation: run 10s linear infinite;
-        &:hover {
-          animation-play-state: paused;
+        animation: Moving 3s linear infinite;
+        .text {
+          left: -80%;
+          margin-top: 50px;
+          background: url(../../../images/wood.jpg);
+          position: relative;
+          width: 70%;
+          display: block;
+          border: #6c432f 10px solid;
+          border-right: 100px solid #6c432f;
+          padding: 40px 150px 40px 100px;
+          margin-bottom: 150px;
+          border-radius: 150px 1000px 1000px 150px;
+          filter: drop-shadow(0px 10px 20px #000000);
+          animation: run 8s linear infinite;
+          &:hover {
+            animation-play-state: paused;
+          }
         }
       }
       &:nth-child(2) {
-        position: relative;
-        background: url(../../../images/wood.jpg);
-        left: 110%;
-        width: 70%;
-        display: block;
-        border: #6c432f 10px solid;
-        border-left: 100px solid #6c432f;
-        padding-left: 150px;
-        margin-bottom: 150px;
-        border-radius: 1000px 150px 150px 1000px;
-        filter: drop-shadow(0px 10px 20px #000000);
-        animation: go 10s linear infinite;
-        &:hover {
-          animation-play-state: paused;
+        animation: Moving 3s linear infinite;
+        .text {
+          position: relative;
+          background: url(../../../images/wood.jpg);
+          left: 110%;
+          width: 70%;
+          display: block;
+          border: #6c432f 10px solid;
+          border-left: 100px solid #6c432f;
+          padding: 40px 100px 40px 150px;
+          margin-bottom: 150px;
+          border-radius: 1000px 150px 150px 1000px;
+          filter: drop-shadow(0px 10px 20px #000000);
+          animation: go 8s linear infinite;
+          &:hover {
+            animation-play-state: paused;
+          }
         }
       }
       &:nth-child(3) {
-        left: -80%;
-        position: relative;
-        background: url(../../../images/wood.jpg);
-        width: 70%;
-        display: block;
-        border: #6c432f 10px solid;
-        border-right: 100px solid #6c432f;
-        padding-right: 150px;
-        margin-bottom: 150px;
-        border-radius: 150px 1000px 1000px 150px;
-        filter: drop-shadow(0px 10px 20px #000000);
-        animation: run 10s linear infinite;
-        &:hover {
-          animation-play-state: paused;
+        animation: Moving 3s linear infinite;
+        .text {
+          left: -80%;
+          position: relative;
+          background: url(../../../images/wood.jpg);
+          width: 70%;
+          display: block;
+          border: #6c432f 10px solid;
+          border-right: 100px solid #6c432f;
+          padding: 40px 150px 40px 100px;
+          margin-bottom: 150px;
+          border-radius: 150px 1000px 1000px 150px;
+          filter: drop-shadow(0px 10px 20px #000000);
+          animation: run 8s linear infinite;
+          &:hover {
+            animation-play-state: paused;
+          }
         }
       }
       &:nth-child(4) {
-        position: relative;
-        background: url(../../../images/wood.jpg);
-        width: 70%;
-        left: 110%;
-        display: block;
-        border: #6c432f 10px solid;
-        border-left: 100px solid #6c432f;
-        padding-left: 150px;
-        margin-bottom: 50px;
-        border-radius: 1000px 150px 150px 1000px;
-        filter: drop-shadow(0px 10px 20px #000000);
-        animation: go 10s linear infinite;
-        &:hover {
-          animation-play-state: paused;
+        animation: Moving 3s linear infinite;
+        .text {
+          position: relative;
+          background: url(../../../images/wood.jpg);
+          width: 70%;
+          left: 110%;
+          display: block;
+          border: #6c432f 10px solid;
+          border-left: 100px solid #6c432f;
+          padding: 40px 100px 40px 150px;
+          margin-bottom: 50px;
+          border-radius: 1000px 150px 150px 1000px;
+          filter: drop-shadow(0px 10px 20px #000000);
+          animation: go 8s linear infinite;
+          &:hover {
+            animation-play-state: paused;
+          }
         }
       }
       h2 {
@@ -134,7 +135,7 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(15px);
+    transform: translateY(20px);
   }
   100% {
     transform: translateY(0px);

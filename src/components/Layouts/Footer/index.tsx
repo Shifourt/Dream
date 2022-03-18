@@ -6,7 +6,7 @@ import styles from "./Footer.module.scss";
 interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (

@@ -7,13 +7,15 @@ $ew: 640px;
 $eh: 420px;
 
 .Wrapper {
+  position: relative;
   width: 100%;
   background: #1d2b55;
   padding-bottom: 50px;
   padding-top: 50px;
   filter: drop-shadow(0px -10px 10px black);
+  z-index: 9999999;
   .footerCap {
-    position: absolute;
+    position: relative;
     height: 0%;
     background: black;
     opacity: 1;
