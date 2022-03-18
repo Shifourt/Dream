@@ -39,28 +39,76 @@
       position: relative;
       background: linear-gradient(to left, #68d3f0, #b7c8f5);
       filter: drop-shadow(0px 5px 50px #51d7fc);
-      padding: 20px;
-      border: #ae83d3 2px solid;
+      padding: 50px;
+      z-index: 2;
       &:nth-child(1) {
-        width: 40%;
-        border-radius: 100px 10px 100px 10px;
+        left: -80%;
+        margin-top: 50px;
+        background: url(../../../images/wood.jpg);
+        position: relative;
+        width: 70%;
+        display: block;
+        border: #6c432f 10px solid;
+        border-right: 100px solid #6c432f;
+        padding-right: 150px;
         margin-bottom: 150px;
+        border-radius: 150px 1000px 1000px 150px;
+        filter: drop-shadow(0px 10px 20px #000000);
+        animation: run 10s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
       &:nth-child(2) {
-        width: 40%;
-        left: 60%;
-        border-radius: 100px 10px 100px 10px;
+        position: relative;
+        background: url(../../../images/wood.jpg);
+        left: 110%;
+        width: 70%;
+        display: block;
+        border: #6c432f 10px solid;
+        border-left: 100px solid #6c432f;
+        padding-left: 150px;
         margin-bottom: 150px;
+        border-radius: 1000px 150px 150px 1000px;
+        filter: drop-shadow(0px 10px 20px #000000);
+        animation: go 10s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
       &:nth-child(3) {
-        width: 40%;
-        border-radius: 100px 10px 100px 10px;
+        left: -80%;
+        position: relative;
+        background: url(../../../images/wood.jpg);
+        width: 70%;
+        display: block;
+        border: #6c432f 10px solid;
+        border-right: 100px solid #6c432f;
+        padding-right: 150px;
         margin-bottom: 150px;
+        border-radius: 150px 1000px 1000px 150px;
+        filter: drop-shadow(0px 10px 20px #000000);
+        animation: run 10s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
       &:nth-child(4) {
-        width: 40%;
-        left: 60%;
-        border-radius: 100px 10px 100px 10px;
+        position: relative;
+        background: url(../../../images/wood.jpg);
+        width: 70%;
+        left: 110%;
+        display: block;
+        border: #6c432f 10px solid;
+        border-left: 100px solid #6c432f;
+        padding-left: 150px;
+        margin-bottom: 50px;
+        border-radius: 1000px 150px 150px 1000px;
+        filter: drop-shadow(0px 10px 20px #000000);
+        animation: go 10s linear infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
       h2 {
         font-size: 40px;
@@ -69,11 +117,13 @@
         filter: drop-shadow(0px 1px 1px #000000);
       }
       p {
-        font-size: 18px;
-        color: #9254c8;
-        font-weight: 600;
-        padding: 20px;
-        filter: drop-shadow(0px 0px 15px #6dd2ed);
+        width: 100%;
+        text-align: center;
+        color: rgb(223, 204, 204);
+        font-size: 15px;
+        font-family: serif;
+        filter: drop-shadow(0px 5px 5px black);
+        text-transform: uppercase;
       }
     }
   }
@@ -95,6 +145,14 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(1500px);
+    transform: translateX(2500px);
+  }
+}
+@keyframes go {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-2500px);
   }
 }

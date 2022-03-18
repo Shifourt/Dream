@@ -27,7 +27,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
         <Image src={Island} alt={"/"} />
       </div>
       <div className={styles.texts}>
-        <div data-aos="flip-up" className={styles.text}>
+        <div className={styles.text}>
           <h2>Plans</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -39,7 +39,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             Natus, tempore. Sit impedit earum ipsum!
           </p>
         </div>
-        <div data-aos="flip-up" className={styles.text}>
+        <div className={styles.text}>
           <h2>Education</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
@@ -48,7 +48,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             autem ipsam.
           </p>
         </div>
-        <div data-aos="flip-down" className={styles.text}>
+        <div className={styles.text}>
           <h2>Safty</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae in
@@ -58,7 +58,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             mollitia voluptate at?
           </p>
         </div>
-        <div data-aos="flip-down" className={styles.text}>
+        <div className={styles.text}>
           <h2>Population</h2>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,
