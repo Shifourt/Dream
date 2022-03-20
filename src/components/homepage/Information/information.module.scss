@@ -5,6 +5,52 @@
   padding-bottom: 200px;
   margin-top: -5%;
   z-index: 4;
+  overflow: hidden;
+
+  .moving {
+    animation: up 11s linear infinite;
+    .ShipOne {
+      position: absolute;
+      width: 40%;
+      top: 350px;
+      left: -500px;
+      z-index: 4;
+      animation: run 15s linear infinite;
+    }
+    .ShipTwo {
+      position: absolute;
+      width: 25%;
+      top: 650px;
+      right: -500px;
+      z-index: 4;
+      animation: go 15s linear infinite;
+    }
+    .ShipThree {
+      position: absolute;
+      width: 40%;
+      top: 1050px;
+      left: -500px;
+      z-index: 4;
+      animation: run 15s linear infinite;
+    }
+    .ShipFour {
+      position: absolute;
+      width: 35%;
+      top: 1400px;
+      right: -500px;
+      z-index: 4;
+      animation: go 15s linear infinite;
+    }
+  }
+
+  .inWater {
+    position: absolute;
+    width: 20%;
+    top: -20px;
+    left: 10%;
+    z-index: 4;
+    animation: up 15s linear infinite;
+  }
   .Container {
     .waves {
       position: absolute;
@@ -50,8 +96,18 @@
           z-index: 6;
           h2 {
             position: relative;
+            color: rgb(75, 208, 231);
             font-size: 40px;
-            margin-top: 10%;
+            margin-top: 5%;
+            font-weight: 900;
+            text-transform: uppercase;
+            filter: drop-shadow(0px 2px 2px black);
+          }
+          p {
+            font-size: 20px;
+            color: rgb(75, 208, 231);
+            font-weight: 700;
+            filter: drop-shadow(0px 1px 1px black);
           }
         }
         .background {
@@ -86,7 +142,7 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(2500px);
+    transform: translateX(2000px);
   }
 }
 @keyframes go {
@@ -94,6 +150,6 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-2500px);
+    transform: translateX(-2000px);
   }
 }

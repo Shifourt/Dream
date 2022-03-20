@@ -2,6 +2,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import InWater from "../../../images/inWater.png";
+import ShipOne from "../../../images/ship1.png";
+import ShipTwo from "../../../images/ship2.png";
+import ShipThree from "../../../images/ship3.png";
+import ShipFour from "../../../images/ship4.png";
 import Water from "../../../images/water.png";
 import styles from "./information.module.scss";
 
@@ -13,6 +18,29 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
 
   return (
     <div className={styles.aboutContant}>
+      <div className={styles.inWater}>
+        <Image src={InWater} alt={"/"} />
+      </div>
+      <div className={styles.moving}>
+        <div className={styles.ShipOne}>
+          <Image src={ShipOne} alt={"/"} />
+        </div>
+      </div>
+      <div className={styles.moving}>
+        <div className={styles.ShipThree}>
+          <Image src={ShipTwo} alt={"/"} />
+        </div>
+      </div>
+      <div className={styles.moving}>
+        <div className={styles.ShipTwo}>
+          <Image src={ShipThree} alt={"/"} />
+        </div>
+      </div>
+      <div className={styles.moving}>
+        <div className={styles.ShipFour}>
+          <Image src={ShipFour} alt={"/"} />
+        </div>
+      </div>
       <div className={styles.Container}>
         <div className={styles.waves}>
           <div className={styles.wave}>
