@@ -77,12 +77,6 @@ const Footer: React.FC<FooterProps> = () => {
                 </span>
               </div>
             </div>
-            <a
-              className={styles.copyright}
-              href="https://www.facebook.com/danted30"
-            >
-              &copy;2022 RAFI
-            </a>
           </div>
         </div>
       </div>
