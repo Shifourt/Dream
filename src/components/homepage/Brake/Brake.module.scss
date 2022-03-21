@@ -35,7 +35,18 @@
       animation: run 10s linear infinite;
     }
   }
+  .wave {
+    display: none;
+    @media screen and (min-width: 768px) and (max-width: 1080px) {
+      display: block;
+      position: absolute;
+      margin-top: 130px;
+      z-index: 0;
+      opacity: 0.9;
+    }
+  }
 }
+
 @keyframes Moving {
   100% {
     transform: translateY(-4px);

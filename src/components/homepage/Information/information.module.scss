@@ -6,6 +6,10 @@
   margin-top: -5%;
   z-index: 4;
   overflow: hidden;
+  @media screen and (min-width: 768px) and (max-width: 1080px) {
+    padding-top: 0px;
+    margin-top: 15%;
+  }
 
   .moving {
     animation: up 11s linear infinite;
@@ -102,12 +106,18 @@
             font-weight: 900;
             text-transform: uppercase;
             filter: drop-shadow(0px 2px 2px black);
+            @media screen and (min-width: 768px) and (max-width: 1080px) {
+              font-size: 30px;
+            }
           }
           p {
             font-size: 20px;
             color: rgb(75, 208, 231);
             font-weight: 700;
             filter: drop-shadow(0px 1px 1px black);
+            @media screen and (min-width: 768px) and (max-width: 1080px) {
+              font-size: 18px;
+            }
           }
         }
         .background {

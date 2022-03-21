@@ -9,31 +9,20 @@ $eh: 420px;
 .Wrapper {
   position: relative;
   width: 100%;
-  background: #a0b023;
+  background: #93c20e;
   padding-top: 50px;
-  margin-top: 180px;
+  margin-top: -5px;
   padding-bottom: 280px;
   filter: drop-shadow(0px 0px 1px black);
   z-index: 9999999;
   @media screen and (min-width: 768px) and (max-width: 1080px) {
     overflow: hidden;
+    margin-top: 0px;
+    filter: none;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     overflow: hidden;
-  }
-
-  .bridge {
-    width: 10%;
-    position: absolute;
-    top: -220px;
-    left: 50%;
-    @media screen and (max-width: 1600px) {
-      width: 8%;
-      top: -200px;
-    }
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      display: none;
-    }
+    margin-top: 0px;
   }
 
   .content {
@@ -72,6 +61,9 @@ $eh: 420px;
           }
           @media screen and (max-width: 1400px) {
             right: -95%;
+          }
+          @media screen and (max-width: 1450px) {
+            right: -90%;
           }
           @media screen and (max-width: 1300px) {
             right: -80%;

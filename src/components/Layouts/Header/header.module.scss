@@ -1,4 +1,5 @@
 .headerContainer {
+  position: relative;
   height: 10vh;
   color: white;
   align-items: center;
@@ -60,7 +61,7 @@
     }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1080px) {
   .hamburgers {
     cursor: pointer;
     z-index: 99;
@@ -128,12 +129,12 @@
   .sideNav {
     .navLinks {
       display: none;
-      width: 100%;
-      height: 100vh;
+      width: 0%;
+      height: 90vh;
       background: linear-gradient(to left, #6b90ff, #156f75);
       transition: all 0.4s ease-in-out;
-      transform: translateX(200%);
       top: -5%;
+      z-index: -1;
       li {
         display: none;
         a {
@@ -146,15 +147,15 @@
   }
   .activeSideNav {
     .navLinks {
+      display: block;
       position: absolute;
       width: 40%;
       height: 90vh;
       background: linear-gradient(to left, #6b90ff, #4481c1);
       transition: all 0.6s ease-in-out;
-      transform: translateX(0%);
       list-style: none;
       top: -5%;
-      right: 5%;
+      right: 0%;
       z-index: 1;
       li {
         cursor: pointer;

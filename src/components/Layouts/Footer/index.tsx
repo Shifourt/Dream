@@ -10,7 +10,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import Bridge from "../../../images/bridge.png";
 import House from "../../../images/house.png";
 import Trees from "../../../images/trees.png";
 import TreesTwo from "../../../images/trees2.png";
@@ -24,10 +23,6 @@ const Footer: React.FC<FooterProps> = () => {
 
   return (
     <div className={styles.Wrapper}>
-      <div data-aos="fade-up" className={styles.bridge}>
-        <Image src={Bridge} alt={"/"} />
-      </div>
-
       <div className={styles.content}>
         <div className={styles.Section}>
           <div className={styles.innerContent}>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Airplane from "../../../images/airplane.png";
 import Cloud from "../../../images/Cloud.png";
+import Water from "../../../images/water.png";
 import styles from "./Brake.module.scss";
 
 interface HomeFeaturedProps {}
@@ -25,6 +26,9 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
         <div className={styles.Plane}>
           <Image src={Airplane} alt={"/"} />
         </div>
+      </div>
+      <div className={styles.wave}>
+        <Image src={Water} alt={"/"} />
       </div>
     </div>
   );
