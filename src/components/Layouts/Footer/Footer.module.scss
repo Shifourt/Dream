@@ -11,16 +11,29 @@ $eh: 420px;
   width: 100%;
   background: #a0b023;
   padding-top: 50px;
-  margin-top: 200px;
+  margin-top: 180px;
   padding-bottom: 280px;
   filter: drop-shadow(0px 0px 1px black);
   z-index: 9999999;
+  @media screen and (min-width: 768px) and (max-width: 1080px) {
+    overflow: hidden;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    overflow: hidden;
+  }
 
   .bridge {
     width: 10%;
     position: absolute;
-    top: -210px;
+    top: -220px;
     left: 50%;
+    @media screen and (max-width: 1600px) {
+      width: 8%;
+      top: -200px;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      display: none;
+    }
   }
 
   .content {
@@ -51,6 +64,24 @@ $eh: 420px;
           position: absolute;
           top: 35%;
           right: -73%;
+          @media screen and (max-width: 1600px) {
+            right: -114%;
+          }
+          @media screen and (max-width: 1500px) {
+            right: -110%;
+          }
+          @media screen and (max-width: 1400px) {
+            right: -95%;
+          }
+          @media screen and (max-width: 1300px) {
+            right: -80%;
+          }
+          @media screen and (max-width: 1200px) {
+            right: -70%;
+          }
+          @media screen and (max-width: 1100px) {
+            right: -55%;
+          }
         }
       }
     }
@@ -213,6 +244,10 @@ $eh: 420px;
             &:hover {
               color: khaki;
             }
+            @media screen and (min-width: 320px) and (max-width: 767px) {
+              font-size: 20px;
+              padding: 5px;
+            }
           }
         }
       }
@@ -220,25 +255,6 @@ $eh: 420px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .Wrapper {
-    .footerCap {
-      position: absolute;
-      height: 0%;
-      background: black;
-      opacity: 1;
-
-      &::after {
-        content: "";
-        border-style: solid;
-        border-width: 0 $ew + -350px $eh + -300px $ew + -350px;
-        border-color: $cn $cn $el $cn;
-        position: absolute;
-        bottom: 0%;
-      }
-    }
-  }
-}
 @media screen and (max-width: 767px) {
   .Wrapper {
     .footerCap {

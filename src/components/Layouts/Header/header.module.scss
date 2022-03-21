@@ -60,7 +60,7 @@
     }
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 767px) {
   .hamburgers {
     cursor: pointer;
     z-index: 99;
@@ -127,7 +127,7 @@
   }
   .sideNav {
     .navLinks {
-      position: fixed;
+      display: none;
       width: 100%;
       height: 100vh;
       background: linear-gradient(to left, #6b90ff, #156f75);
@@ -146,7 +146,7 @@
   }
   .activeSideNav {
     .navLinks {
-      position: fixed;
+      position: absolute;
       width: 40%;
       height: 90vh;
       background: linear-gradient(to left, #6b90ff, #4481c1);
