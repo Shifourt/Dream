@@ -10,9 +10,10 @@ $eh: 420px;
   position: relative;
   width: 100%;
   background: #a0b023;
-  padding-bottom: 70px;
   padding-top: 50px;
-  filter: drop-shadow(0px -10px 10px black);
+  margin-top: 200px;
+  padding-bottom: 250px;
+  filter: drop-shadow(0px 0px 1px black);
   z-index: 9999999;
 
   .footerCap {
@@ -34,6 +35,14 @@ $eh: 420px;
     z-index: 2;
     position: relative;
     font-size: 16px;
+
+    .Trees {
+      position: absolute;
+      left: -2%;
+      top: -100%;
+      z-index: -1;
+    }
+
     .Section {
       justify-content: center;
       text-align: center;
@@ -108,6 +117,9 @@ $eh: 420px;
               transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
               div {
                 position: relative;
+                a {
+                  color: rgb(236, 201, 201);
+                }
               }
               .facebook {
                 width: 35%;
@@ -171,18 +183,6 @@ $eh: 420px;
                 background: #de463b;
               }
             }
-          }
-        }
-
-        .copyright {
-          position: absolute;
-          text-decoration: none;
-          color: #dfcccc;
-          font-weight: 900;
-          font-size: 20px;
-          text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.9);
-          &:hover {
-            color: khaki;
           }
         }
         ul {

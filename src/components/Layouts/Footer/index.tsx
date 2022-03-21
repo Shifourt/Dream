@@ -8,7 +8,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 import React, { useEffect } from "react";
+import Trees from "../../../images/trees.png";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {}
@@ -40,7 +42,9 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.tooltip}>Facebook</div>
                 <span>
                   <div className={styles.facebook}>
-                    <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
+                    <a href="https://www.facebook.com/danted30">
+                      <FontAwesomeIcon icon={faFacebookF}></FontAwesomeIcon>
+                    </a>
                   </div>
                 </span>
               </div>
@@ -48,7 +52,9 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.tooltip}>Twitter</div>
                 <span>
                   <div className={styles.twitter}>
-                    <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                    <a href="">
+                      <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
+                    </a>
                   </div>
                 </span>
               </div>
@@ -56,7 +62,9 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.tooltip}>Instagram</div>
                 <span>
                   <div className={styles.instagram}>
-                    <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                    <a href="">
+                      <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
+                    </a>
                   </div>
                 </span>
               </div>
@@ -64,7 +72,9 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.tooltip}>Github</div>
                 <span>
                   <div className={styles.github}>
-                    <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                    <a href="https://github.com/Shifourt">
+                      <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                    </a>
                   </div>
                 </span>
               </div>
@@ -72,12 +82,17 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.tooltip}>YouTube</div>
                 <span>
                   <div className={styles.youtube}>
-                    <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
+                    <a href="https://www.youtube.com/channel/UCcv9iUiaQm-f-gc97A9takw">
+                      <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
+                    </a>
                   </div>
                 </span>
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.Trees}>
+          <Image src={Trees} alt={"/"} />
         </div>
       </div>
     </div>
