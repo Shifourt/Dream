@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 200px;
   background: #85d6ea;
 
   ul {
@@ -11,7 +12,7 @@
     left: -10%;
     list-style: none;
     li {
-      margin-top: -50px;
+      margin-top: -40px;
       &:nth-child(1) {
         margin-top: 80px;
       }
@@ -20,43 +21,6 @@
         margin-top: -70px;
       }
     }
-  }
-  .beach {
-    position: relative;
-    margin-top: 110px;
-    z-index: 0;
-    h2 {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      color: #c6ff2a;
-      padding: 35px;
-      font-size: 50px;
-      font-family: serif;
-      filter: drop-shadow(0px 5px 5px rgb(255, 29, 29));
-      text-transform: uppercase;
-      z-index: 4;
-    }
-    .people {
-      position: absolute;
-      width: 20%;
-      margin-top: -520px;
-      left: 10%;
-    }
-    .peopleTwo {
-      position: absolute;
-      width: 20%;
-      margin-top: -520px;
-      right: 10%;
-    }
-  }
-  .water {
-    position: relative;
-    margin-top: -330px;
-    transition: transform 500ms ease-in;
-    animation: up 10s linear infinite;
-    opacity: 0.9;
-    z-index: 1;
   }
   .header {
     position: relative;
@@ -79,7 +43,7 @@
     z-index: 4;
     .img {
       background: url(../../../images/Paid_Vacation-1080x675.png) no-repeat left;
-      background-size: 70%;
+      background-size: 20%;
       overflow: hidden;
       padding: 80px;
       height: 100vh;

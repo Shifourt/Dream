@@ -10,7 +10,10 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import Bridge from "../../../images/bridge.png";
+import House from "../../../images/house.png";
 import Trees from "../../../images/trees.png";
+import TreesTwo from "../../../images/trees2.png";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {}
@@ -21,7 +24,9 @@ const Footer: React.FC<FooterProps> = () => {
 
   return (
     <div className={styles.Wrapper}>
-      <div data-aos="fade-up" className={styles.footerCap}></div>
+      <div data-aos="fade-up" className={styles.bridge}>
+        <Image src={Bridge} alt={"/"} />
+      </div>
 
       <div className={styles.content}>
         <div className={styles.Section}>
@@ -91,8 +96,19 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
         </div>
+        <div className={styles.House}>
+          <Image src={House} alt={"/"} />
+        </div>
         <div className={styles.Trees}>
-          <Image src={Trees} alt={"/"} />
+          <div className={styles.Tree}>
+            <Image src={Trees} alt={"/"} />
+          </div>
+          <div className={styles.Tree}>
+            <Image src={Trees} alt={"/"} />
+          </div>
+          <div className={styles.Tree}>
+            <Image src={TreesTwo} alt={"/"} />
+          </div>
         </div>
       </div>
     </div>
