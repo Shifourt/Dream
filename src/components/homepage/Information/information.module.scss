@@ -130,6 +130,9 @@
           opacity: 0.2;
           z-index: 1;
           border-radius: 10px 100px 10px 100px;
+          @media screen and (max-width: 1600px) {
+            width: 1000px;
+          }
         }
       }
     }

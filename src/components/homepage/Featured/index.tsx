@@ -75,12 +75,12 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
         <li>
           <Image src={Grass} alt={"/"} />
         </li>
-        <li>
-          <Image src={Fence} alt={"/"} />
-        </li>
       </ul>
       <div className={styles.beach}>
         <h2 data-aos="fade-in">all you need is a break</h2>
+        <div className={styles.Fence}>
+          <Image src={Fence} alt={"/"} />
+        </div>
         <div className={styles.sand}>
           <Image src={Beach} alt={"/"} />
         </div>
