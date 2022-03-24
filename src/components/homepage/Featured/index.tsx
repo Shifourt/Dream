@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Grass from "../../../images/grass2.png";
+import Vacation from "../../../images/Paid_Vacation-1080x675.png";
 import Logo from "../../../images/sun-umbrella2.png";
 import styles from "./HomeFeatured.module.scss";
 
@@ -17,16 +18,17 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
       <h1 className={styles.header}>about us</h1>
       <div className={styles.Section}>
         <div data-aos="fade-in" className={styles.img}>
-          <div className={styles.Text}>
-            <div className={styles.image}>
-              <Image src={Logo} alt={"/"} />
-            </div>
-            <p>
-              We just want you to get out of this robotic world and feel free!!
-            </p>
-            <div>
-              <a href={"/"}>Lets Go</a>
-            </div>
+          <Image src={Vacation} alt={"/"} />
+        </div>
+        <div className={styles.Text}>
+          <div className={styles.image}>
+            <Image src={Logo} alt={"/"} />
+          </div>
+          <p>
+            We just want you to get out of this robotic world and feel free!!
+          </p>
+          <div>
+            <a href={"/"}>Lets Go</a>
           </div>
         </div>
       </div>
