@@ -5,6 +5,7 @@
   align-items: center;
   display: flex;
   .Logo {
+    width: 60%;
     display: flex;
     margin-left: 30px;
     .image {
@@ -25,7 +26,8 @@
   }
 
   .sideNav {
-    width: 50%;
+    position: relative;
+    width: 40%;
     .navLinks {
       display: flex;
       list-style: none;

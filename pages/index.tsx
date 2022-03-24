@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Beach from "../src/components/homepage/Beach";
 import Brake from "../src/components/homepage/Brake";
 import BrakeTwo from "../src/components/homepage/BrakeTwo";
 import Featured from "../src/components/homepage/Featured";
@@ -14,6 +15,7 @@ const Home: NextPage = (props) => {
       <Brake />
       <BrakeTwo />
       <Featured />
+      <Beach />
       <Information />
       <Terms />
     </Layouts>
