@@ -10,9 +10,14 @@ import styles from "./Sign.module.scss";
 interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   const [modal, setModal] = useState(false);
+  const [state, setState] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
+  };
+
+  const toggleState = () => {
+    setState(!state);
   };
 
   useEffect(() => {
@@ -32,8 +37,10 @@ const Footer: React.FC<FooterProps> = () => {
         <div className={styles.Popup}>
           <div onClick={toggleModal} className={styles.Overlay}></div>
           <div className={styles.popupContainer}>
-            <div className={styles.Envelope}>
-              <div className={styles.stamp}>
+            <div
+              className={`${styles.Envelope} ${state ? styles.activeForm : ""}`}
+            >
+              <div onClick={toggleState} className={styles.stamp}>
                 <Image src={Seal} alt={"/"} />
               </div>
               <div className={styles.envelopeCap}></div>
@@ -47,19 +54,17 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className={styles.contactForm}>
                   <input
                     type="text"
-                    id="name"
-                    placeholder="Your Name"
+                    placeholder="username"
                     className={styles.formControl}
                   />
                   <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
+                    type="password"
+                    placeholder="password"
                     className={styles.formControl}
                   />
+                  <a className={styles.Btn}>Sign In</a>
                 </div>
               </div>
-              <button className={styles.Btn}>send</button>
             </div>
           </div>
         </div>
