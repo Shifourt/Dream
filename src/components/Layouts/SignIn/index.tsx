@@ -2,7 +2,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import SignIn from "../../../images/envelope.png";
 import Seal from "../../../images/seal.png";
 import Umbrella from "../../../images/sun-umbrella.png";
 import styles from "./Sign.module.scss";
@@ -30,7 +29,7 @@ const Footer: React.FC<FooterProps> = () => {
         onClick={toggleModal}
         className={`${styles.SignIn} ${modal ? styles.active : ""}`}
       >
-        <Image src={SignIn} alt={"/"} />
+        <Image src={Seal} alt={"/"} />
       </div>
 
       {modal && (
@@ -46,24 +45,27 @@ const Footer: React.FC<FooterProps> = () => {
               <div className={styles.envelopeCap}></div>
               <div className={styles.letterForm}>
                 <div className={styles.letterTitle}>
+                  <p onClick={toggleState} className={styles.close}>
+                    X
+                  </p>
                   <div className={styles.Umbrella}>
                     <Image src={Umbrella} alt={"/"} />
                   </div>
                   <h2>We are always ready to serve you</h2>
                 </div>
-                <div className={styles.contactForm}>
-                  <input
-                    type="text"
-                    placeholder="username"
-                    className={styles.formControl}
-                  />
-                  <input
-                    type="password"
-                    placeholder="password"
-                    className={styles.formControl}
-                  />
-                  <a className={styles.Btn}>Sign In</a>
-                </div>
+              </div>
+              <div className={styles.contactForm}>
+                <input
+                  type="text"
+                  placeholder="username"
+                  className={styles.formControl}
+                />
+                <input
+                  type="password"
+                  placeholder="password"
+                  className={styles.formControl}
+                />
+                <a className={styles.Btn}>Sign In</a>
               </div>
             </div>
           </div>

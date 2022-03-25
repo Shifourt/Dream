@@ -1,7 +1,7 @@
 $cn: rgba(0, 0, 0, 0);
-$el: #532727;
-$er: #532727;
-$eb: #532727;
+$el: #bee0e0;
+$er: #c4dff0;
+$eb: #a4d4f2;
 $ef: #532727;
 $ew: 640px;
 $eh: 420px;
@@ -17,7 +17,8 @@ $eh: 420px;
     right: 2%;
     opacity: 1;
     cursor: pointer;
-    margin-top: 38%;
+    bottom: 2%;
+    filter: drop-shadow(0px 5px 6px black);
     &.active {
       opacity: 0;
     }
@@ -42,11 +43,16 @@ $eh: 420px;
         cursor: default;
         width: 55%;
         height: $eh;
-        background: $eb;
+        background: $el;
         left: 25%;
         margin-top: 20%;
         position: fixed;
         z-index: 15;
+
+        @media screen and (max-width: 1600px) {
+          width: 50%;
+        }
+
         &:after,
         &:before {
           content: "";
@@ -55,14 +61,22 @@ $eh: 420px;
           bottom: 0;
           border-style: solid;
           border-width: $eh + 0px 0 0 $ew + 100px;
-          border-color: $cn $cn $cn $el;
+          border-color: $cn $cn $cn $eb;
           z-index: 4;
           filter: drop-shadow(0px 5px 6px black);
+
+          @media screen and (max-width: 1600px) {
+            border-width: $eh + 0px 0 0 $ew + 160px;
+          }
         }
         &:after {
           border-width: $eh + 0px $ew + 100px 0 0;
-          border-color: $cn $el $cn $cn;
+          border-color: $cn $er $cn $cn;
           filter: drop-shadow(0px 5px 6px black);
+
+          @media screen and (max-width: 1600px) {
+            border-width: $eh + 0px $ew + 160px 0 0;
+          }
         }
 
         .envelopeCap {
@@ -76,7 +90,7 @@ $eh: 420px;
           transition: 0.2s 0.2s ease-in;
           transform-origin: 50% 100% 0;
           transform: rotateX(180deg);
-          filter: drop-shadow(0px 2px 6px black);
+          filter: drop-shadow(0px -2px 6px black);
 
           &:after {
             content: "";
@@ -86,15 +100,26 @@ $eh: 420px;
             position: absolute;
             left: 0;
             bottom: 100%;
+
+            @media screen and (max-width: 1600px) {
+              border-width: 0 $ew - 250px $eh - 240px $ew - 230px;
+            }
           }
         }
         .stamp {
           width: 10%;
           position: absolute;
-          top: 40%;
-          left: 45%;
+          top: 45%;
+          left: 42%;
           z-index: 7;
+          transition: 0.2s ease-in;
+          transition-delay: 0.2s;
           cursor: pointer;
+          filter: drop-shadow(0px 2px 6px black);
+
+          @media screen and (max-width: 1600px) {
+            left: 46%;
+          }
         }
         .letterForm {
           border-radius: 5px;
@@ -108,6 +133,18 @@ $eh: 420px;
           z-index: 3;
           line-height: 2;
           transition: 0.2s ease-in;
+
+          @media screen and (max-width: 1600px) {
+            width: 650px;
+          }
+
+          .close {
+            position: relative;
+            float: right;
+            font-size: 25px;
+            margin-top: -20px;
+            cursor: pointer;
+          }
 
           .letterTitle {
             font-weight: 500;
@@ -128,37 +165,48 @@ $eh: 420px;
               padding: 10px;
             }
           }
+        }
 
-          .contactForm {
-            position: relative;
-            width: 50%;
-            margin: 0 auto;
-            font-weight: 600;
-            transition: all 4s ease-in-out;
-            padding: 20px;
+        .contactForm {
+          position: relative;
+          width: 50%;
+          margin: 0 auto;
+          margin-top: -25px;
+          font-weight: 600;
+          padding: 20px;
+          opacity: 0;
+          text-align: center;
 
-            .formControl {
-              display: flex;
-              width: 100%;
-              outline: none;
-              padding: 5px 5px 5px 20px;
-              font-size: 16px;
-              background: transparent;
-              border-radius: 1px;
-              border: 2px solid gray;
-              text-transform: capitalize;
-              margin-bottom: 20px;
-            }
-            .Btn {
-            }
+          .formControl {
+            display: flex;
+            width: 100%;
+            outline: none;
+            padding: 5px 5px 5px 20px;
+            font-size: 16px;
+            background: transparent;
+            border-radius: 1px;
+            border: 2px solid gray;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            z-index: 15;
+          }
+          .Btn {
+            opacity: 0;
           }
         }
 
         &.activeForm {
+          .contactForm {
+            opacity: 1;
+            z-index: 25;
+            transition: all 2s ease-in-out;
+            transition-delay: 0.2s;
+          }
           .Btn {
             opacity: 1;
             transition: 0.9s ease-in;
             transition-delay: 0.5s;
+            cursor: pointer;
           }
           .letterForm {
             bottom: $eh - 220px;
