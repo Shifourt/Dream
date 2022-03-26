@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Grass from "../../../images/grass2.png";
-import Vacation from "../../../images/Paid_Vacation-1080x675.png";
+import Vacation from "../../../images/Paid_Vacation-1080x675.jpg";
 import Logo from "../../../images/sun-umbrella2.png";
 import styles from "./HomeFeatured.module.scss";
 

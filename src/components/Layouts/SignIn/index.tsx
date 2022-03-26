@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Seal from "../../../images/seal.png";
+import SignIn from "../../../images/SIGNIN.png";
 import Umbrella from "../../../images/sun-umbrella.png";
 import styles from "./Sign.module.scss";
 
@@ -10,6 +11,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   const [modal, setModal] = useState(false);
   const [state, setState] = useState(false);
+  const [info, setInfo] = useState(false);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -17,6 +19,9 @@ const Footer: React.FC<FooterProps> = () => {
 
   const toggleState = () => {
     setState(!state);
+  };
+  const toggleInfo = () => {
+    setInfo(!info);
   };
 
   useEffect(() => {
@@ -29,7 +34,7 @@ const Footer: React.FC<FooterProps> = () => {
         onClick={toggleModal}
         className={`${styles.SignIn} ${modal ? styles.active : ""}`}
       >
-        <Image src={Seal} alt={"/"} />
+        <Image src={SignIn} alt={"/"} />
       </div>
 
       {modal && (
@@ -54,7 +59,12 @@ const Footer: React.FC<FooterProps> = () => {
                   <h2>We are always ready to serve you</h2>
                 </div>
               </div>
-              <div className={styles.contactForm}>
+
+              <div
+                className={`${styles.contactForm} ${
+                  info ? styles.activeInfo : ""
+                }`}
+              >
                 <input
                   type="text"
                   placeholder="username"
@@ -65,7 +75,15 @@ const Footer: React.FC<FooterProps> = () => {
                   placeholder="password"
                   className={styles.formControl}
                 />
-                <a className={styles.Btn}>Sign In</a>
+                <div className={styles.successful}>
+                  <p>login successful</p>
+                </div>
+                <a onClick={toggleInfo} className={styles.Btn}>
+                  Sign In
+                </a>
+                <a onClick={toggleInfo} className={styles.BtnTwo}>
+                  logout
+                </a>
               </div>
             </div>
           </div>

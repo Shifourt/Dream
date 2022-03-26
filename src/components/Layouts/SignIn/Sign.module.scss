@@ -10,6 +10,7 @@ $eh: 420px;
   position: absolute;
   z-index: 99;
   width: 100%;
+
   .SignIn {
     position: fixed;
     width: 5%;
@@ -48,9 +49,16 @@ $eh: 420px;
         margin-top: 20%;
         position: fixed;
         z-index: 15;
-
-        @media screen and (max-width: 1600px) {
+        @media screen and (min-width: 1600px) {
           width: 50%;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1080px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 767px) {
+          width: 90%;
+          left: 5%;
+          margin-top: 30%;
         }
 
         &:after,
@@ -65,8 +73,14 @@ $eh: 420px;
           z-index: 4;
           filter: drop-shadow(0px 5px 6px black);
 
-          @media screen and (max-width: 1600px) {
+          @media screen and (min-width: 1600px) {
             border-width: $eh + 0px 0 0 $ew + 160px;
+          }
+          @media screen and (min-width: 768px) and (max-width: 1080px) {
+            border-width: $eh + 0px 0 0 $ew + 8px;
+          }
+          @media screen and (max-width: 767px) {
+            border-width: $eh + 0px 0 0 $ew + 50px;
           }
         }
         &:after {
@@ -74,8 +88,14 @@ $eh: 420px;
           border-color: $cn $er $cn $cn;
           filter: drop-shadow(0px 5px 6px black);
 
-          @media screen and (max-width: 1600px) {
+          @media screen and (min-width: 1600px) {
             border-width: $eh + 0px $ew + 160px 0 0;
+          }
+          @media screen and (min-width: 768px) and (max-width: 1080px) {
+            border-width: $eh + 0px $ew + 8px 0 0;
+          }
+          @media screen and (max-width: 767px) {
+            border-width: $eh + 0px $ew + 50px 0 0;
           }
         }
 
@@ -101,8 +121,14 @@ $eh: 420px;
             left: 0;
             bottom: 100%;
 
-            @media screen and (max-width: 1600px) {
-              border-width: 0 $ew - 250px $eh - 240px $ew - 230px;
+            @media screen and (min-width: 1600px) {
+              border-width: 0 $ew - 250px $eh - 220px $ew - 230px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1080px) {
+              border-width: 0 $ew - 330px $eh - 280px $ew - 300px;
+            }
+            @media screen and (max-width: 767px) {
+              border-width: 0 $ew - 300px $eh - 280px $ew - 290px;
             }
           }
         }
@@ -118,7 +144,17 @@ $eh: 420px;
           filter: drop-shadow(0px 2px 6px black);
 
           @media screen and (max-width: 1600px) {
+            top: 48%;
             left: 46%;
+          }
+
+          @media screen and (min-width: 768px) and (max-width: 1080px) {
+            left: 46%;
+            top: 42%;
+          }
+          @media screen and (min-width: 767px) {
+            left: 46%;
+            top: 42%;
           }
         }
         .letterForm {
@@ -134,8 +170,14 @@ $eh: 420px;
           line-height: 2;
           transition: 0.2s ease-in;
 
-          @media screen and (max-width: 1600px) {
+          @media screen and (min-width: 1600px) {
             width: 650px;
+          }
+          @media screen and (min-width: 768px) and (max-width: 1080px) {
+            width: 520px;
+          }
+          @media screen and (max-width: 767px) {
+            width: 550px;
           }
 
           .close {
@@ -178,6 +220,7 @@ $eh: 420px;
           text-align: center;
 
           .formControl {
+            position: relative;
             display: flex;
             width: 100%;
             outline: none;
@@ -190,11 +233,47 @@ $eh: 420px;
             margin-bottom: 20px;
             z-index: 15;
           }
-          .Btn {
+
+          .successful {
             opacity: 0;
           }
-        }
 
+          .Btn {
+            position: absolute;
+            opacity: 0;
+            padding: 5px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            left: 40%;
+          }
+          .BtnTwo {
+            position: absolute;
+            opacity: 0;
+            padding: 5px;
+            border: 2px solid gray;
+            border-radius: 5px;
+            left: 40%;
+          }
+
+          &.activeInfo {
+            .formControl {
+              display: none;
+            }
+            .BtnTwo {
+              opacity: 1;
+            }
+            .Btn {
+              display: none;
+            }
+            .successful {
+              opacity: 1;
+              p {
+                text-transform: capitalize;
+                font-size: 30px;
+              }
+            }
+          }
+        }
         &.activeForm {
           .contactForm {
             opacity: 1;
