@@ -20,6 +20,12 @@ $eh: 420px;
     cursor: pointer;
     bottom: 2%;
     filter: drop-shadow(0px 5px 6px black);
+    @media screen and (max-width: 767px) {
+      width: 8%;
+    }
+    @media screen and (max-width: 480px) {
+      width: 10%;
+    }
     &.active {
       opacity: 0;
     }
@@ -60,6 +66,10 @@ $eh: 420px;
           left: 5%;
           margin-top: 30%;
         }
+        @media screen and (max-width: 480px) {
+          margin-top: 50%;
+          width: 90%;
+        }
 
         &:after,
         &:before {
@@ -82,6 +92,15 @@ $eh: 420px;
           @media screen and (max-width: 767px) {
             border-width: $eh + 0px 0 0 $ew + 50px;
           }
+          @media screen and (max-width: 480px) {
+            border-width: $eh - 0px 0 0 $ew - 209px;
+          }
+          @media screen and (max-width: 375px) {
+            border-width: $eh - 0px 0 0 $ew - 300px;
+          }
+          @media screen and (max-width: 320px) {
+            border-width: $eh - 0px 0 0 $ew - 350px;
+          }
         }
         &:after {
           border-width: $eh + 0px $ew + 100px 0 0;
@@ -96,6 +115,15 @@ $eh: 420px;
           }
           @media screen and (max-width: 767px) {
             border-width: $eh + 0px $ew + 50px 0 0;
+          }
+          @media screen and (max-width: 480px) {
+            border-width: $eh - 0px $ew - 209px 0 0;
+          }
+          @media screen and (max-width: 375px) {
+            border-width: $eh - 0px $ew - 300px 0 0;
+          }
+          @media screen and (max-width: 320px) {
+            border-width: $eh - 0px $ew - 350px 0 0;
           }
         }
 
@@ -130,13 +158,21 @@ $eh: 420px;
             @media screen and (max-width: 767px) {
               border-width: 0 $ew - 300px $eh - 280px $ew - 290px;
             }
+            @media screen and (max-width: 480px) {
+              border-width: 0 $ew - 425px $eh - 280px $ew - 425px;
+            }
+            @media screen and (max-width: 375px) {
+              border-width: 0 $ew - 470px $eh - 280px $ew - 470px;
+            }
+            @media screen and (max-width: 320px) {
+              border-width: 0 $ew - 495px $eh - 280px $ew - 495px;
+            }
           }
         }
         .stamp {
           width: 10%;
           position: absolute;
-          top: 45%;
-          left: 42%;
+          margin-left: -20px;
           z-index: 7;
           transition: 0.2s ease-in;
           transition-delay: 0.2s;
@@ -144,7 +180,7 @@ $eh: 420px;
           filter: drop-shadow(0px 2px 6px black);
 
           @media screen and (max-width: 1600px) {
-            top: 48%;
+            margin-top: 6%;
             left: 46%;
           }
 
@@ -153,7 +189,11 @@ $eh: 420px;
             top: 42%;
           }
           @media screen and (min-width: 767px) {
-            left: 46%;
+            left: 48%;
+            top: 38%;
+          }
+          @media screen and (max-width: 480px) {
+            left: 50%;
             top: 42%;
           }
         }
@@ -178,6 +218,17 @@ $eh: 420px;
           }
           @media screen and (max-width: 767px) {
             width: 550px;
+          }
+          @media screen and (max-width: 480px) {
+            width: 300px;
+          }
+          @media screen and (max-width: 375px) {
+            width: 250px;
+            left: 50px;
+          }
+          @media screen and (max-width: 320px) {
+            width: 200px;
+            left: 50px;
           }
 
           .close {
@@ -205,6 +256,9 @@ $eh: 420px;
             h2 {
               font-size: 20px;
               padding: 10px;
+              @media screen and (max-width: 375px) {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -245,6 +299,14 @@ $eh: 420px;
             border: 2px solid gray;
             border-radius: 5px;
             left: 40%;
+            cursor: pointer;
+            @media screen and (max-width: 480px) {
+              left: 35%;
+            }
+            @media screen and (max-width: 320px) {
+              margin-top: -40px;
+              left: 30%;
+            }
           }
           .BtnTwo {
             position: absolute;
@@ -253,6 +315,13 @@ $eh: 420px;
             border: 2px solid gray;
             border-radius: 5px;
             left: 40%;
+            cursor: pointer;
+            @media screen and (max-width: 480px) {
+              left: 35%;
+            }
+            @media screen and (max-width: 320px) {
+              left: 30%;
+            }
           }
 
           &.activeInfo {
@@ -270,6 +339,12 @@ $eh: 420px;
               p {
                 text-transform: capitalize;
                 font-size: 30px;
+                @media screen and (max-width: 375px) {
+                  font-size: 20px;
+                }
+                @media screen and (max-width: 320px) {
+                  font-size: 20px;
+                }
               }
             }
           }
