@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = () => {
             Travel is the only thing you buy that makes you richer
           </h2>
           <div data-aos="fade-left">
-            <a href={"/"}>Lets Go</a>
+            <a href={"/Tour"}>Lets Go</a>
           </div>
         </div>
         <div className={styles.OverView}>

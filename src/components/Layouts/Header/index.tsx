@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = () => {
             <a href={"/"}>About Us</a>
           </li>
           <li data-aos="flip-down">
-            <a className={styles.another} href={"/"}>
+            <a className={styles.another} href={"/Tour"}>
               Lets Go
             </a>
           </li>

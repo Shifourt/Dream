@@ -28,7 +28,7 @@ const HomeFeatured: React.FC<HomeFeaturedProps> = () => {
             We just want you to get out of this robotic world and feel free!!
           </p>
           <div>
-            <a href={"/"}>Lets Go</a>
+            <a href={"/Tour"}>Lets Go</a>
           </div>
         </div>
       </div>
